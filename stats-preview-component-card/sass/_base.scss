@@ -1,3 +1,5 @@
+////////////////
+//RESETS
 
 *{
     margin: 0;
@@ -11,9 +13,27 @@
 }
 
 
+
+
+
+
+
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+
+
+    @include break-point-up("small"){
+        font-size: 67.5%;
+    }
+
+
+    @include breakpoint-down("small"){
+        font-size: 50%;
+        overflow: hidden;
+        padding: 0;
+    }
+    
 }
 
 body{
@@ -29,14 +49,12 @@ body{
 
 
 .container{
-    background-color: hsl(233, 47%, 7%);
-    max-width: 144rem;
-    min-height: 100vh;
+    background-color: rgb(9, 11, 26);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1.6rem 2.4rem;
 
 }
 
@@ -49,7 +67,7 @@ body{
     font-size: 11px;
     text-align: center;
     color: violet;
-    padding: 1.5rem;
+    margin-top: 5rem;
 
     a{
         color: hsl(229, 11%, 61%);

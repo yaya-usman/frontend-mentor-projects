@@ -3,20 +3,48 @@
     border-radius: 8px;
     overflow: hidden;
 
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
+    @include break-point-up("medium"){
+        width: 54rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include break-point-up("large"){
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        width: 113rem;
+        margin: 0 auto;
+
+    }
+
+    
 
 
    &__photo{
-     background-image: url(../images/image-header-mobile.jpg);
-     background-size: cover;
-     height: 28rem;
-     width: 100%;
-     position: relative;
-     
+    position: relative;
+    background-image: url(../images/image-header-mobile.jpg);
+    background-size: cover;
+    height: 28rem;
+    width: 100%;
 
+    
+    @include break-point-up("medium"){
+        background-image: url(../images/image-header-desktop.jpg);
+        height: 44rem;
+        
+    }
+
+    // @include break-point-up("large"){
+    //     width: 100%;
+    //     height: 100%;
+    //     max-width: 540px;
+    //     max-height: 446px;
+    // }
 
     &::after{
         content: "";
@@ -35,6 +63,18 @@
        text-align: center;
        margin: 4.7rem; 
        width: 26.4rem;
+
+       
+    @include break-point-up("medium"){
+        width: 100%;
+        margin: 3.7rem;
+    }
+
+
+    @include break-point-up("large"){
+        text-align: left;
+
+    }
 
     }
 
@@ -61,16 +101,45 @@
             color: $color-white-3;
             text-transform: uppercase;
        }
+
+       @include break-point-up("medium"){
+           font-size: 1.7rem;
+            line-height: 1.7;
+       }
    }
 
 
   
    &__stats-box{
        margin: 4.8rem auto;
+
+
+       @include break-point-up("medium"){
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+           margin-bottom: 0;
+       }
+
+       @include break-point-up("large"){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0;
+    }
    }
 
-   &__stat:not(:last-child){
-       margin-bottom:3.4rem ;
-   }
+   &__stat{
+   
+        &:not(:last-child){
+            margin-bottom:3.4rem ;
+            }
+
+     @include break-point-up("medium"){
+         align-self: stretch;
+     }
+
+    
+    }
 }
 
