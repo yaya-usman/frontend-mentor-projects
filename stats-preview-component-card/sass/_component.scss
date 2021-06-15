@@ -1,24 +1,28 @@
 .preview-card{
     background-color:$dark-blue-secondary;
     border-radius: 8px;
+    width: 100%;
+    margin: 5rem auto;
     overflow: hidden;
+
+    
+
 
     @include break-point-up("medium"){
         width: 54rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        margin : 8rem auto 2rem;
     }
 
     @include break-point-up("large"){
         display: flex;
         flex-direction: row-reverse;
-        max-width: 100%;
-        max-height: 100%;
-        height: auto;
-        width: 113rem;
-        margin: 0 auto;
+        max-width: 110rem;
+        max-height: 44rem;
+        width: 100%;
+        margin: 12rem auto 6rem auto;
+
 
     }
 
@@ -26,60 +30,61 @@
 
 
    &__photo{
-    position: relative;
-    background-image: url(../images/image-header-mobile.jpg);
-    background-size: cover;
-    height: 28rem;
-    width: 100%;
 
-    
-    @include break-point-up("medium"){
-        background-image: url(../images/image-header-desktop.jpg);
-        height: 44rem;
+        position: relative;
+        background-image: url(../images/image-header-mobile.jpg);
+        background-size: cover;
+        height: 24rem;
+        width: 100%;
+        margin-bottom: 4.7rem;
+
         
-    }
+        @include break-point-up("medium"){
+            background-image: url(../images/image-header-desktop.jpg);
+            height: 44rem;
+            max-height: 44.6rem;
+            max-width: 54rem;
+            
+        }
 
-    // @include break-point-up("large"){
-    //     width: 100%;
-    //     height: 100%;
-    //     max-width: 540px;
-    //     max-height: 446px;
-    // }
 
-    &::after{
-        content: "";
-        height: inherit;
-        width: inherit;
-        position: absolute;
-        inset: 0;
-        background-color: $violet-accent;
-        mix-blend-mode: multiply;
-    }
+        &::after{
+            content: "";
+            height: inherit;
+            width: inherit;
+            position: absolute;
+            inset: 0;
+            background-color: $violet-accent;
+            mix-blend-mode: multiply;
+            opacity: 90%;
 
-     
+        }
+
+        
    }
 
    &__content{
-       text-align: center;
-       margin: 4.7rem; 
-       width: 26.4rem;
+        text-align: center;
+        margin: auto;
+
 
        
     @include break-point-up("medium"){
-        width: 100%;
-        margin: 3.7rem;
+        margin: 0 auto;
+        width: 40rem;
     }
 
 
     @include break-point-up("large"){
         text-align: left;
+        padding-top: 6rem ;
+        
 
     }
 
     }
 
    &__heading-primary{
-         font-size: 2.7rem;
          margin-bottom: 2rem;
 
 
@@ -92,10 +97,11 @@
 
 
    &__paragraph{
-       font-size: 1.4rem;
        font-weight: 300;
        line-height: 1.8;
        color: $color-white-2;
+       width: 28rem;
+       margin: 0 auto;
 
        span{
             color: $color-white-3;
@@ -103,12 +109,12 @@
        }
 
        @include break-point-up("medium"){
-           font-size: 1.7rem;
             line-height: 1.7;
+            width: 100%;
+
        }
-   }
 
-
+    }
   
    &__stats-box{
        margin: 4.8rem auto;
@@ -116,17 +122,11 @@
 
        @include break-point-up("medium"){
            display: flex;
-           justify-content: space-around;
-           align-items: center;
-           margin-bottom: 0;
+           justify-content: space-between;
+           margin-top: 8.4rem;
        }
 
-       @include break-point-up("large"){
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 0;
-    }
+       @include break-point-up("large"){margin-right: 3rem;}
    }
 
    &__stat{
