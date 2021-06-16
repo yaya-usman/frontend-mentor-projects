@@ -26,12 +26,14 @@ Challenge is to build out the following card component and get it looking as clo
 
 #### The Original(Desktop-view and Mobile-view)
 
-![](./design/desktop-design.jpg) ![](./design/mobile-design.jpg)
+![](./design/desktop-design.jpg) 
+![](./design/mobile-design.jpg)
 
 
 #### My Solution(Desktop-view and Mobile-view)
 
-![](./design/solution(desktop).jpg) ![](./design/solution(mobile).jpg)
+![](./design/solution(desktop).png) 
+![](./design/solution(mobile).png)
 
 
 ### Links
