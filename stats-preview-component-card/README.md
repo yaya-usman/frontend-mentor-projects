@@ -76,7 +76,7 @@ const firstChallenge = () => {
 ## Author
 - LinkedIn - [Let's connect](http://www.linkedin.com/in/yaya-usman-adaiza-430964192)
 - Frontend Mentor - [@Elixir-K](https://www.frontendmentor.io/profile/Elixir-K)
-- Website - [check back in few months time ☺]()
+- Website - [check back in few months time :)]()
 
 
 
