@@ -1,5 +1,5 @@
 # Frontendmentor challenges solutions
-This is a solutions repo for documenting my progress to [frontend mentor](https://www.frontendmentor.io/) challenges i have done so far.
+This is a repo for documenting my solutions to[frontend mentor](https://www.frontendmentor.io/) challenges/projects i have completed so far.
 
 
 ### List of the projects
