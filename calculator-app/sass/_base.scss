@@ -19,6 +19,10 @@
 --color-light-grayish-orange : hsl(30, 25%, 89%);
 --color-grayish-orange : hsl(28, 16%, 65%);
 
+//text
+
+--color-very-dark-grayish-blue: hsl(221, 14%, 31%);
+--color-white: hsl(0, 0, 100%);
 
 }
 
@@ -44,4 +48,9 @@ body{
     font-size: 3.2rem;
     line-height: 1.6;
     background-color: var(--color-very-dark-desaturated-blue1);
+
+    @media only screen and (max-width: 20em) {
+        // padding: 2.2rem;
+    }
+
 }
