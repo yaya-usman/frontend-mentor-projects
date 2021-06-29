@@ -37,9 +37,9 @@ body {
 }
 
 .container {
-  max-width: 56.2rem;
+  max-width: 48rem;
   width: 32.6rem;
-  margin: 0 auto;
+  margin: 3rem auto;
 }
 
 @media only screen and (max-width: 20em) {
@@ -65,7 +65,7 @@ body {
   justify-content: space-between;
   align-items: baseline;
   color: white;
-  padding: 3.3rem 0;
+  padding: 3.3rem  0 0;
 }
 
 .heading--left {
@@ -99,7 +99,7 @@ body {
 .heading--right .toggle span:nth-child(1) {
   display: block;
   position: absolute;
-  top: 3.5rem;
+  top: 6rem;
   letter-spacing: .7rem;
   margin-left: .8rem;
 }
@@ -114,7 +114,7 @@ body {
 
 .main {
   display: grid;
-  grid-template-rows: 8.8rem 42rem;
+  grid-template-rows: minmax(8.8rem, 1fr) 42rem;
   justify-content: center;
   padding: 2rem;
   row-gap: 2.5rem;
@@ -128,7 +128,7 @@ body {
 
 @media only screen and (min-width: 68.75em) {
   .main {
-    grid-template-columns: 56.2rem;
+    grid-template-columns: 48rem;
   }
 }
 
@@ -136,15 +136,21 @@ body {
   border-radius: 1rem;
   background-color: var(--color-very-dark-desaturated-blue3);
   display: flex;
-  flex-direction: row-reverse;
-  align-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 2.6rem;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-.screen h3 {
-  font-size: 3.5rem;
+.screen .prev-op {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.3rem;
+}
+
+.screen .curr-op {
   color: white;
-  padding: 2.6rem;
-  align-self: center;
+  font-size: 3.3rem;
 }
 
 .keys-container {
@@ -198,20 +204,20 @@ body {
   font-size: 1.75rem;
 }
 
-.key-reset {
+.btn--eq {
+  grid-column: 3/-1;
+  background-color: var(--color-red);
+  box-shadow: 0 0.4rem 0.2rem var(--color-dark-red);
+}
+
+.btn--reset {
   grid-column: 1/span 2;
   text-transform: uppercase;
   background-color: var(--color-desaturated-dark-blue1);
   box-shadow: 0 0.4rem 0.2rem var(--color-desaturated-dark-blue2);
 }
 
-.key-eq {
-  grid-column: 3/-1;
-  background-color: var(--color-red);
-  box-shadow: 0 0.4rem 0.2rem var(--color-dark-red);
-}
-
-.key-del {
+.btn--del {
   text-transform: uppercase;
   background-color: var(--color-desaturated-dark-blue1);
   box-shadow: 0 0.4rem 0.2rem var(--color-desaturated-dark-blue2);
