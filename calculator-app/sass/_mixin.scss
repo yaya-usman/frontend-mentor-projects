@@ -42,15 +42,20 @@
     }
 
     &--colored {
-      background-color: var(--color-dark-moderate-cyan);
-      box-shadow: 0 0.4rem 0.2rem var(--color-very-dark-cyan);
+      background-color: var(--color-desaturated-dark-blue1);
+      box-shadow: 0 0.4rem 0.2rem var(--color-desaturated-dark-blue2);
     }
   }
 
-  .attribution a {
+   .attribution{
     color: var(--color-very-dark-blue);
   }
+    .attribution a {
+      color: gray;
+    }
 }
+
+
 
 //theme-2
 @mixin theme-2-styles {
@@ -106,7 +111,7 @@
 
 //theme-3
 @mixin theme-3-styles {
-  background-color: var(--color-very-dark-violet);
+  background-color: var(--color-very-dark-violet1);
 
   .heading {
     color: var(--color-light-yellow);
@@ -118,7 +123,7 @@
       span{
         background-color: var(--color-pure-cyan);
         position: absolute;
-        right: 5rem;
+        right: 3rem;
 
         //   transform: translateX(1rem);
 

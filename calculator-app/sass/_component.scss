@@ -88,6 +88,9 @@
     padding: 2rem;
     row-gap: 2.5rem;
 
+    @media only screen and (max-width: 56.25em){
+        grid-template-rows: minmax(8.8rem, 13.5rem) 42rem;
+    }
 
     @media only screen and (min-width: 56.25em){
         grid-template-columns: 45rem ;
@@ -108,7 +111,7 @@
     justify-content: center;
     align-items: flex-end;
     padding: 2.6rem;
-    overflow: hidden;
+    word-break: break-all;
 
      .prev-op{
         font-size: 1.3rem;
