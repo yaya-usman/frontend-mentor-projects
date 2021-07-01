@@ -25,6 +25,7 @@ numToggle.forEach((toggle) => {
         body.classList.add("theme-1");
         body.classList.remove("theme-2");
         body.classList.remove("theme-3");
+        
     }
   });
 });

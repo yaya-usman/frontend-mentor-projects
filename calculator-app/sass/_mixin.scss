@@ -11,6 +11,8 @@
 
       span {
         transform: translateX(-0.2rem);
+        // background-color: var(--color-red);
+
       }
     }
   }
@@ -34,6 +36,8 @@
   .btn {
     background-color: var(--color-light-grayish-orange);
     box-shadow: 0 0.4rem 0.2rem var(--color-grayish-orange);
+    color: var(--color-very-dark-grayish-blue);    
+
 
     &--eq {
       background-color: var(--color-red);
@@ -44,6 +48,7 @@
     &--colored {
       background-color: var(--color-desaturated-dark-blue1);
       box-shadow: 0 0.4rem 0.2rem var(--color-desaturated-dark-blue2);
+      color: white;
     }
   }
 
@@ -53,7 +58,8 @@
     .attribution a {
       color: gray;
     }
-}
+  }
+
 
 
 
@@ -109,6 +115,8 @@
   }
 }
 
+
+
 //theme-3
 @mixin theme-3-styles {
   background-color: var(--color-very-dark-violet1);
@@ -123,11 +131,7 @@
       span{
         background-color: var(--color-pure-cyan);
         position: absolute;
-        right: 3rem;
-
-        //   transform: translateX(1rem);
-
-        //   transition: all 1s ease-in-out;
+        right: 0.5rem;
       }
     }
   }

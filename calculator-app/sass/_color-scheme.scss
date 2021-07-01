@@ -17,17 +17,17 @@ body.theme-2{
 
 //===========COLOR SCHEME AUTO=========//
 
-//Light Mode
+// Light Mode
 @media (prefers-color-scheme: light) {
-  body{
+  body.theme-2{
    @include theme-2-styles;
   }
 }
 
-//Dark Mode
+// //Dark Mode
 @media (prefers-color-scheme: dark) {
-  body{
-    @include theme-3-styles;
+  body.theme-3{
+    @include theme-3-styles;   
   }
 }
 
