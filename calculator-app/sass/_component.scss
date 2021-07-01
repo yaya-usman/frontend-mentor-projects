@@ -2,6 +2,7 @@
     width: 32.6rem;
     margin: 2.5rem auto;
 
+
      @media only screen and (max-width: 20em) {
             width: 30rem;
         }
@@ -17,6 +18,8 @@
 
 }
 
+
+//=============HEADER===========//
 .heading{
 
     display: flex;
@@ -24,8 +27,6 @@
     align-items: baseline;
     color: white;
     padding: 3.3rem 0 0;
-
-
 
     &--left{
         font-size: 3.5rem;
@@ -65,7 +66,6 @@
             margin-left: 2.2rem;
             display: flex;
             align-items: center;
-
             span{
                 width: 1.7rem;
                 height: 1.7rem;
@@ -77,6 +77,8 @@
      
     }
 }
+
+
 
 
 //===========MAIN===============//
@@ -103,6 +105,8 @@
     }
 }
 
+
+//=================DISPLAY===============//
 .screen{
     border-radius: 1rem;
     background-color: var(--color-very-dark-desaturated-blue3);
@@ -125,6 +129,8 @@
     }
 
 }
+
+//============KEYPAD============//
 
 .keys-container{
     background-color: var(--color-very-dark-desaturated-blue2);
@@ -189,6 +195,17 @@
         box-shadow: 0 .4rem .2rem var(--color-dark-red);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

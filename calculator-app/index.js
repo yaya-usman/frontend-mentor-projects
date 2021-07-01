@@ -31,14 +31,11 @@ numToggle.forEach((toggle) => {
 
 //adding comma
 const formatNumber = (num) => {
-    const number = Number(num).toLocaleString("en");
-    return number;
-
+  const number = Number(num).toLocaleString("en");
+  return number;
 };
 
-
 //button functionality
-let format = "";
 btn.forEach((button) => {
   button.addEventListener("click", (e) => {
     switch (e.target.textContent) {
@@ -64,13 +61,11 @@ btn.forEach((button) => {
 
       default:
         currVal.textContent += e.target.textContent;
-
     }
   });
 });
 
 //keydown press functionality
-
 document.addEventListener("keydown", (e) => {
   for (let i = 0; i < 10; i++) {
     switch (e.key) {
