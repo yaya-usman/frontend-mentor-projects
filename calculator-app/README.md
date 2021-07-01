@@ -28,9 +28,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](images/screenshot-1.png)
-![](images/screenshot-2.png)
-![](images/screenshot-3.png)
+![](images/Screenshot-1.png)
+![](images/Screenshot-2.png)
+![](images/Screenshot-3.png)
 
 ### Links
 
