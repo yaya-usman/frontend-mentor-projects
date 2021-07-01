@@ -37,9 +37,8 @@ body {
 }
 
 .container {
-  max-width: 56.2rem;
   width: 32.6rem;
-  margin: 0 auto;
+  margin: 2.5rem auto;
 }
 
 @media only screen and (max-width: 20em) {
@@ -56,7 +55,7 @@ body {
 
 @media only screen and (min-width: 68.75em) {
   .container {
-    width: 100%;
+    width: 48rem;
   }
 }
 
@@ -65,7 +64,7 @@ body {
   justify-content: space-between;
   align-items: baseline;
   color: white;
-  padding: 3.3rem 0;
+  padding: 3.3rem 0 0;
 }
 
 .heading--left {
@@ -78,6 +77,7 @@ body {
   align-items: center;
   font-size: 1.3rem;
   text-transform: uppercase;
+  position: relative;
 }
 
 @media only screen and (max-width: 20em) {
@@ -86,7 +86,21 @@ body {
   }
 }
 
-.heading--right .toggle {
+.heading--right .toggle-num {
+  position: absolute;
+  top: -2.3rem;
+  left: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading--right .toggle-num > * {
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.heading--right .toggle-box {
   width: 7.6rem;
   height: 2.5rem;
   border-radius: 10rem;
@@ -96,15 +110,7 @@ body {
   align-items: center;
 }
 
-.heading--right .toggle span:nth-child(1) {
-  display: block;
-  position: absolute;
-  top: 3.5rem;
-  letter-spacing: .7rem;
-  margin-left: .8rem;
-}
-
-.heading--right .toggle span:last-child {
+.heading--right .toggle-box span {
   width: 1.7rem;
   height: 1.7rem;
   background-color: var(--color-red);
@@ -128,7 +134,7 @@ body {
 
 @media only screen and (min-width: 68.75em) {
   .main {
-    grid-template-columns: 56.2rem;
+    grid-template-columns: 48rem;
   }
 }
 
@@ -136,15 +142,21 @@ body {
   border-radius: 1rem;
   background-color: var(--color-very-dark-desaturated-blue3);
   display: flex;
-  flex-direction: row-reverse;
-  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2.6rem;
+  overflow: hidden;
 }
 
-.screen h3 {
-  font-size: 3.5rem;
+.screen .prev-op {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.screen .curr-op {
+  font-size: 3.2rem;
   color: white;
-  padding: 2.6rem;
-  align-self: center;
 }
 
 .keys-container {
@@ -196,23 +208,276 @@ body {
 .btn--colored {
   color: white;
   font-size: 1.75rem;
-}
-
-.key-reset {
-  grid-column: 1/span 2;
   text-transform: uppercase;
   background-color: var(--color-desaturated-dark-blue1);
   box-shadow: 0 0.4rem 0.2rem var(--color-desaturated-dark-blue2);
 }
 
-.key-eq {
+.btn--reset {
+  grid-column: 1/span 2;
+}
+
+.btn--eq {
+  color: white;
   grid-column: 3/-1;
   background-color: var(--color-red);
   box-shadow: 0 0.4rem 0.2rem var(--color-dark-red);
 }
 
-.key-del {
-  text-transform: uppercase;
-  background-color: var(--color-desaturated-dark-blue1);
-  box-shadow: 0 0.4rem 0.2rem var(--color-desaturated-dark-blue2);
+body.theme-1 {
+  background-color: var(--color-very-dark-desaturated-blue1);
+}
+
+body.theme-1 .heading {
+  color: white;
+}
+
+body.theme-1 .heading .toggle-box {
+  background-color: var(--color-very-dark-desaturated-blue2);
+  transition: all 1s ease-in-out;
+}
+
+body.theme-1 .heading .toggle-box span {
+  transform: translateX(-0.2rem);
+}
+
+body.theme-1 .screen {
+  background-color: var(--color-very-dark-desaturated-blue3);
+}
+
+body.theme-1 .screen .prev-op {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+body.theme-1 .screen .curr-op {
+  color: white;
+}
+
+body.theme-1 .keys-container {
+  background-color: var(--color-very-dark-desaturated-blue2);
+}
+
+body.theme-1 .btn {
+  background-color: var(--color-light-grayish-orange);
+  box-shadow: 0 0.4rem 0.2rem var(--color-grayish-orange);
+}
+
+body.theme-1 .btn--eq {
+  background-color: var(--color-red);
+  box-shadow: 0 0.4rem 0.2rem var(--color-dark-red);
+  color: white;
+}
+
+body.theme-1 .btn--colored {
+  background-color: var(--color-dark-moderate-cyan);
+  box-shadow: 0 0.4rem 0.2rem var(--color-very-dark-cyan);
+}
+
+body.theme-1 .attribution a {
+  color: var(--color-very-dark-blue);
+}
+
+body.theme-2 {
+  background-color: var(--color-light-gray);
+}
+
+body.theme-2 .heading {
+  color: var(--color-very-dark-grayish-yellow);
+}
+
+body.theme-2 .heading .toggle-box {
+  background-color: var(--color-grayish-red);
+  transition: all 1s ease-in-out;
+}
+
+body.theme-2 .heading .toggle-box span {
+  transform: translateX(2.5rem);
+}
+
+body.theme-2 .screen {
+  background-color: var(--color-very-light-gray);
+}
+
+body.theme-2 .screen .prev-op {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+body.theme-2 .screen .curr-op {
+  color: var(--color-very-dark-grayish-yellow);
+}
+
+body.theme-2 .keys-container {
+  background-color: var(--color-grayish-red);
+}
+
+body.theme-2 .btn {
+  background-color: var(--color-light-grayish-yellow);
+}
+
+body.theme-2 .btn--colored {
+  background-color: var(--color-dark-moderate-cyan);
+  box-shadow: 0 0.4rem 0.2rem var(--color-very-dark-cyan);
+}
+
+body.theme-2 .btn--eq {
+  background-color: var(--color-orange);
+  box-shadow: 0 0.4rem 0.2rem var(--color-dark-orange);
+}
+
+body.theme-2 .attribution a {
+  color: var(--color-very-dark-blue);
+}
+
+body.theme-3 {
+  background-color: var(--color-very-dark-violet);
+}
+
+body.theme-3 .heading {
+  color: var(--color-light-yellow);
+}
+
+body.theme-3 .heading .toggle-box {
+  background-color: var(--color-very-dark-violet2);
+  position: relative;
+}
+
+body.theme-3 .heading .toggle-box span {
+  background-color: var(--color-pure-cyan);
+  position: absolute;
+  right: 5rem;
+}
+
+body.theme-3 .screen {
+  background-color: var(--color-very-dark-violet2);
+}
+
+body.theme-3 .screen .prev-op {
+  color: rgba(255, 255, 0, 0.65);
+}
+
+body.theme-3 .screen .curr-op {
+  color: var(--color-light-yellow);
+}
+
+body.theme-3 .keys-container {
+  background-color: var(--color-very-dark-violet2);
+}
+
+body.theme-3 .btn {
+  background-color: var(--color-very-dark-violet);
+  box-shadow: 0 0.4rem 0.2rem var(--color-dark-magenta);
+  color: var(--color-light-yellow);
+}
+
+body.theme-3 .btn--colored {
+  background-color: var(--color-dark-violet);
+  box-shadow: 0 0.4rem 0.2rem var(--color-vivid-magenta);
+  color: white;
+}
+
+body.theme-3 .btn--eq {
+  background-color: var(--color-pure-cyan);
+  box-shadow: 0 0.4rem 0.2rem var(--color-soft-cyan);
+  color: white;
+}
+
+body.theme-3 .attribution {
+  color: white;
+}
+
+body.theme-3 .attribution a {
+  color: var(--color-light-yellow);
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--color-light-gray);
+  }
+  body .heading {
+    color: var(--color-very-dark-grayish-yellow);
+  }
+  body .heading .toggle-box {
+    background-color: var(--color-grayish-red);
+    transition: all 1s ease-in-out;
+  }
+  body .heading .toggle-box span {
+    transform: translateX(2.5rem);
+  }
+  body .screen {
+    background-color: var(--color-very-light-gray);
+  }
+  body .screen .prev-op {
+    color: rgba(0, 0, 0, 0.65);
+  }
+  body .screen .curr-op {
+    color: var(--color-very-dark-grayish-yellow);
+  }
+  body .keys-container {
+    background-color: var(--color-grayish-red);
+  }
+  body .btn {
+    background-color: var(--color-light-grayish-yellow);
+  }
+  body .btn--colored {
+    background-color: var(--color-dark-moderate-cyan);
+    box-shadow: 0 0.4rem 0.2rem var(--color-very-dark-cyan);
+  }
+  body .btn--eq {
+    background-color: var(--color-orange);
+    box-shadow: 0 0.4rem 0.2rem var(--color-dark-orange);
+  }
+  body .attribution a {
+    color: var(--color-very-dark-blue);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-very-dark-violet);
+  }
+  body .heading {
+    color: var(--color-light-yellow);
+  }
+  body .heading .toggle-box {
+    background-color: var(--color-very-dark-violet2);
+    position: relative;
+  }
+  body .heading .toggle-box span {
+    background-color: var(--color-pure-cyan);
+    position: absolute;
+    right: 5rem;
+  }
+  body .screen {
+    background-color: var(--color-very-dark-violet2);
+  }
+  body .screen .prev-op {
+    color: rgba(255, 255, 0, 0.65);
+  }
+  body .screen .curr-op {
+    color: var(--color-light-yellow);
+  }
+  body .keys-container {
+    background-color: var(--color-very-dark-violet2);
+  }
+  body .btn {
+    background-color: var(--color-very-dark-violet);
+    box-shadow: 0 0.4rem 0.2rem var(--color-dark-magenta);
+    color: var(--color-light-yellow);
+  }
+  body .btn--colored {
+    background-color: var(--color-dark-violet);
+    box-shadow: 0 0.4rem 0.2rem var(--color-vivid-magenta);
+    color: white;
+  }
+  body .btn--eq {
+    background-color: var(--color-pure-cyan);
+    box-shadow: 0 0.4rem 0.2rem var(--color-soft-cyan);
+    color: white;
+  }
+  body .attribution {
+    color: white;
+  }
+  body .attribution a {
+    color: var(--color-light-yellow);
+  }
 }

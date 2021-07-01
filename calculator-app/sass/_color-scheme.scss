@@ -1,0 +1,33 @@
+
+//=========default==========//
+body.theme-1{
+  @include theme-1-styles;
+}
+
+//=======theme2=======//
+body.theme-2{
+   @include theme-2-styles
+ }
+
+ //=======theme3======//
+ body.theme-3{
+    @include theme-3-styles;
+}
+
+
+//===========COLOR SCHEME AUTO=========//
+
+//Light Mode
+@media (prefers-color-scheme: light) {
+  body{
+   @include theme-2-styles;
+  }
+}
+
+//Dark Mode
+@media (prefers-color-scheme: dark) {
+  body{
+    @include theme-3-styles;
+  }
+}
+
