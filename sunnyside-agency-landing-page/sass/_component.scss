@@ -1,0 +1,100 @@
+//===================Navigation bar=============//
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4.7rem;
+
+  &__logo {
+    margin-left: 2rem;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 3rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--color-white);
+    padding-right: 2.5rem;
+    transform: all 0.3s ease-in-out;
+  }
+}
+
+//=========Button=======//
+
+.btn {
+  font-family: 'Fraunces', serif;
+  color: var(--color-dark-desaturated-cyan);
+  background-color: var(--color-white);
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  border: none;
+  transition: all 0.3s ease-in-out;
+
+  // &:hover{
+  //     // background-color: linear-gradient(to right, rgba(var(--color-white1),.4));
+  //     // color: var(--color-white);
+  // }
+}
+
+.btn__text {
+  font-family: 'Fraunces', serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-very-dark-desaturated-blue);
+  position: relative;
+
+  &--yellow::after,
+  &--red::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0.8rem;
+    width: 100%;
+    border-radius: 100px;
+    opacity: 0.4;
+
+  }
+
+  &--yellow::after {
+    background-color: var(--color-yellow);
+  }
+
+  &--red::after {
+    background-color: var(--color-soft-red);
+  }
+
+  // border-bottom: 5px solid var(--color-yellow);
+}
+
+//===========Hamburger menu==========//
+.hamburger-menu {
+  position: relative;
+  height: 1.8rem;
+  width: 3.5rem;
+  display: none;
+
+  span {
+    position: absolute;
+    inset: 0;
+    height: 0.3rem;
+    width: 100%;
+    background-color: var(--color-white);
+    transition: all 0.3s ease-in-out;
+  }
+
+  span:nth-child(1) {
+    transform: translateY(1rem);
+  }
+  span:nth-child(2) {
+    transform: translateY(2rem);
+  }
+}
