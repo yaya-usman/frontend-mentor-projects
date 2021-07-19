@@ -59,7 +59,7 @@ I might consider additional functionality beyond basic calculation like log,squa
 
 ### Useful resources
 
-- [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) - This helped me with understandingthe `prefers-color-scheme property` since i have never used it before.
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) - This helped me with understanding the `prefers-color-scheme property` since i have never used it before.
 - [Youtube](https://www.youtube.com/watch?v=CI2GwL--ll8&t=908s) - Here i got to understand how to format a number to add comma by using the `toLocalString` property.
 
 ```js
